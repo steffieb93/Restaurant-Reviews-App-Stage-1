@@ -41,7 +41,7 @@
     }
 }
 
-@media screen and (min-width: 310px) and (max-width: 999px) {
+@media screen and (min-width: 395px) and (max-width: 999px) {
     .filter-options select {
         display: block;
         margin: 5px auto;
@@ -65,7 +65,7 @@
     .inside #map-container {
         position: absolute;
         height: 11%;
-        top: 125px;
+        top: 95px;
         width: 100%;
         z-index: 999;
     }
@@ -73,7 +73,7 @@
     #restaurant-container {
         position: relative;
         width: 100%;
-        top: 225px;
+        top: 200px;
         margin-top: 20px;
     }
 
@@ -105,7 +105,84 @@
 
     #reviews-container {
         width: 100%;
-        margin-top: 225px;
+        margin-top: 200px;
+    }
+
+    #reviews-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inside #footer {
+        width: 88%;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    .filter-options select {
+        display: block;
+        margin: 5px auto;
+    }
+
+    .filter-options h2 {
+        margin: 0 20px 10px;
+    }
+
+    #breadcrumb {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #maincontent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inside #map-container {
+        position: absolute;
+        height: 11%;
+        top: 125px;
+        width: 100%;
+        z-index: 999;
+    }
+
+    #restaurant-container {
+        position: relative;
+        width: 100%;
+        top: 220px;
+        margin-top: 20px;
+    }
+
+    #restaurant-name {
+        text-align: center;
+    }
+
+    #restaurant-img {
+        display: block;
+        margin: 10px auto;
+    }
+
+    #restaurant-cuisine {
+        margin: 0 auto;
+    }
+
+    #restaurant-address {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #restaurant-hours {
+        width: auto;
+        margin: 20px auto;
+    }
+    #restaurant-hours td {
+        color: black;
+    }
+
+    #reviews-container {
+        width: 100%;
+        margin-top: 220px;
     }
 
     #reviews-list {

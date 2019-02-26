@@ -81,7 +81,7 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
-  name.tabIndex = '3'; // Making tab index order
+  name.tabIndex = '2'; // Making tab index order
   name.setAttribute("aria-label", restaurant.name); // Making aria label to say restaurant name when tabbed onto
   name.innerHTML = restaurant.name;
 
@@ -91,6 +91,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name + " Restaurant Image";
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -128,9 +129,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
-  title.tabIndex = '8'; // Making tab index order
+  title.tabIndex = '7'; // Making tab index order
   title.setAttribute("aria-label", "Reviews"); // Making aria label
   container.appendChild(title);
 
@@ -168,7 +169,7 @@ createReviewHTML = (review) => {
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
-  li.tabIndex = '9'; // Making tab index order
+  li.tabIndex = '8'; // Making tab index order
   return li;
 }
 
