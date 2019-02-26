@@ -178,10 +178,10 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  //Creating tab index for accessibility when going throuhg list
-  more.setAttribute("role", "restaurantDetails");
-  more.setAttribute("aria-label", restaurant.name);
-  more.tabIndex = '4';
+  // Creating tab index for accessibility when going throuhg list
+  more.setAttribute("role", "restaurantDetails"); // Making the role for each resturant
+  more.setAttribute("aria-label", restaurant.name); // Making aria label to say restaurant name when tabbed onto
+  more.tabIndex = '4'; // Making all resturants in the list a tabindex
 
   li.append(more)
 
@@ -221,9 +221,9 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker
     .register('/serviceworker.js')
     .then(function(success) {
-        console.log('Service Worker Registered!');
+        console.log('Service Worker Registered!'); // Will log on console if service worker is registered
     })
     .catch(function(err) {
-        console.error(err);
+        console.error(err); // Will have error message on console if service worker is NOT registered
     });
 }

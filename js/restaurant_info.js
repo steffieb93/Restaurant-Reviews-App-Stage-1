@@ -81,8 +81,8 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
-  name.tabIndex = '3';
-  name.setAttribute("aria-label", restaurant.name);
+  name.tabIndex = '3'; // Making tab index order
+  name.setAttribute("aria-label", restaurant.name); // Making aria label to say restaurant name when tabbed onto
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
@@ -130,8 +130,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
-  title.tabIndex = '8';
-  title.setAttribute("aria-label", "Reviews");
+  title.tabIndex = '8'; // Making tab index order
+  title.setAttribute("aria-label", "Reviews"); // Making aria label
   container.appendChild(title);
 
   if (!reviews) {
@@ -168,7 +168,7 @@ createReviewHTML = (review) => {
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
-  li.tabIndex = '9';
+  li.tabIndex = '9'; // Making tab index order
   return li;
 }
 

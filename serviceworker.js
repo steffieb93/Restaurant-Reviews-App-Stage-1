@@ -1,4 +1,5 @@
 /*Catching*/
+// Making the array of files that will be added to the cache storage
 const files = [
     '/index.html',
     '/restaurant.html',
@@ -21,6 +22,7 @@ const files = [
 ]
 
 
+// Adding event listener to install all the files into the cache storage after it is opened
 self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open('udacity-project-5').then(function(cache) {
@@ -31,6 +33,7 @@ self.addEventListener('install', function(e) {
 
 
 /*Fetching*/
+// Checking to see if response is found when going though app. If not, will fetch the request that was not found.
 self.addEventListener('fetch', function(e) {
     e.respondWith(
         caches.match(e.request).then(function(response) {
