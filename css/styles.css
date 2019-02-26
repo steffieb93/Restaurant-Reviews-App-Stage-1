@@ -132,6 +132,14 @@ nav h1 a {
   width: 200px;
 }
 
+.option-title {
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	margin: 5px;
+}
+
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;

@@ -179,8 +179,10 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   //Creating tab index for accessibility when going throuhg list
+  more.setAttribute("role", "restaurantDetails");
+  more.setAttribute("aria-label", restaurant.name);
   more.tabIndex = '4';
-  more.role = 'restaurantDetails';
+
   li.append(more)
 
   return li

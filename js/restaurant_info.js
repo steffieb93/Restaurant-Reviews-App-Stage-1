@@ -81,6 +81,8 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
+  name.tabIndex = '3';
+  name.setAttribute("aria-label", restaurant.name);
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
@@ -129,6 +131,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   title.tabIndex = '8';
+  title.setAttribute("aria-label", "Reviews");
   container.appendChild(title);
 
   if (!reviews) {

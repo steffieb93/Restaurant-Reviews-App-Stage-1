@@ -32,13 +32,13 @@
         <!-- Beginning main -->
         <main id="maincontent">
             <!-- Beginning map -->
-            <section id="map-container">
-                <div id="map"></div>
+            <section id="map-container" aria-hidden="true" tabindex="-1">
+                <div id="map" aria-hidden="true" tabindex="-1"></div>
             </section>
             <!-- End map -->
             <!-- Beginning restaurant -->
             <section id="restaurant-container">
-                <h1 tabindex="3" aria-label="resturantName" id="restaurant-name"></h1>
+                <h1 id="restaurant-name"></h1>
                 <img tabindex="4" id="restaurant-img" alt="restaurant-img">
                 <p tabindex="5" id="restaurant-cuisine"></p>
                 <p tabindex="6" id="restaurant-address"></p>
@@ -55,7 +55,7 @@
 
         <!-- Beginning footer -->
         <footer id="footer">
-            Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+            Copyright (c) 2017 <a tabindex="10" href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
         </footer>
         <!-- End footer -->
 
